@@ -32,7 +32,7 @@ public class KickRobotCmd extends CommandBase{
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
-    driveSubsystem.letsKickrobot(0.35, 0.24);
+    driveSubsystem.letsKickrobot(slowSpeed,moreSpeed);
   }
 
   // Called once the command ends or is interrupted.

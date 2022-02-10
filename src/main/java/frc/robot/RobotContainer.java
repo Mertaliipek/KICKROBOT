@@ -60,7 +60,6 @@ public class RobotContainer {
   public Command getAutonomousCommand() {
   return new SequentialCommandGroup(
     new KickRobotCmd(driveSubsystem, DriveContasts.LESS_SPEED, DriveContasts.MORE_SPEED)
-
   );
     
     

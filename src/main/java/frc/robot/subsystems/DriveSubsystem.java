@@ -31,9 +31,7 @@ public class DriveSubsystem extends SubsystemBase {
   @Override
   public void periodic() {
     // This method will be called once per scheduler run
-    // debug
-    SmartDashboard.putNumber("Gyro value", gyro.getAngle());
-    SmartDashboard.putBoolean("Gyro connected", gyro.isConnected());
+    gyro.reset();
     
 
     }
@@ -73,7 +71,7 @@ if (gyro.getAngle() > 0) {      // eger 0 dan buyuk ise loop a donuyor ve loop 0
   left_m.set(rotateSpeedSlow);
   right_m.set(rotateSpeedSlow);
  }
-} else {
+} else{
  while (gyro.getAngle() < -10) {
   left_m.set(rotateSpeed);
   right_m.set(rotateSpeed);
@@ -96,6 +94,9 @@ if (gyro.getAngle() > 0) {      // eger 0 dan buyuk ise loop a donuyor ve loop 0
 
   @Override
   public void simulationPeriodic() {
+    // debug
+    SmartDashboard.putNumber("Gyro value", gyro.getAngle());
+    SmartDashboard.putBoolean("Gyro connected", gyro.isConnected());
     // This method will be called once per scheduler run during simulation
     
     
