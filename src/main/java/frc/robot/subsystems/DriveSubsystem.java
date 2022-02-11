@@ -45,8 +45,8 @@ public class DriveSubsystem extends SubsystemBase {
   public void letsKickrobot(double rotateSpeed,double rotateSpeedSlow) {
 // 3 dereceden kucukse sag tekeri hizlandır diğerini yavaşlat
 if(Math.abs(gyro.getAngle()) <=3) {
-  left_m.set(0.6);
-  right_m.set(-0.4);
+  left_m.set(0.6); //0.24 - (gyro.getAngle()/15));
+  right_m.set(-0.4); // -0.24 - (gyro.getAngle()/15)
 
 } else if(Math.abs(gyro.getAngle()) <=10) {       // derece degidikce hız da degişir
   if (gyro.getAngle() > 0) {
